@@ -1,10 +1,10 @@
-<h1 align="center">E-Learning App</h1>
+<h1 align="center">Supabase Demo</h1>
 
 <div align= "center">
   <h4>Supabase Authentication with Flutter</h4>
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Snehal-Singh174/Supabase-Flutter-Tutorial/issues)
 [![Forks](https://img.shields.io/github/forks/Snehal-Singh174/Supabase-Flutter-Tutorial.svg?logo=github)](https://github.com/Snehal-Singh174/Supabase-Flutter-Tutorial/network/members)
 [![Stargazers](https://img.shields.io/github/stars/Snehal-Singh174/Supabase-Flutter-Tutorial.svg?logo=github)](https://github.com/Snehal-Singh174/Supabase-Flutter-Tutorial/stargazers)
@@ -24,13 +24,13 @@
 - [Flutter](https://flutter.dev/)
 - [Supabase](https://app.supabase.io/)
 - [Android Studio](https://developer.android.com/studio)
-- 
+
 
 ## 🚀&nbsp; Installation
 1. Clone the repo and run it
 ```
-$ git clone https://github.com/Snehal-Singh174/CoDy_GiRlS.git
-$ cd CoDy_GiRlS/
+$ git clone https://github.com/Snehal-Singh174/Supabase-Flutter-Tutorial.git
+$ cd Supabase-Flutter-Tutorial/
 $ flutter run
 ```
 
