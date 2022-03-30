@@ -18,6 +18,11 @@
 ## :hourglass: Project Demo
 :movie_camera: [YouTube Demo Link](https://www.youtube.com/watch?v=udiDArcV71k)
 
+## 📝 Blogs to Refer
+
+- [Dive into Supabase Auth on Flutter: Email/Password, Google, Facebook Provider](https://snehal-singh.medium.com/dive-into-supabase-auth-on-flutter-email-password-google-facebook-provider-8e735ac3680b)
+- [Supabase Vs. Firebase: What you should know about?](https://snehal-singh.medium.com/supabase-vs-firebase-what-you-should-know-about-53959c9dbe19)
+
 
 ## :warning: TechStack/framework used
 
