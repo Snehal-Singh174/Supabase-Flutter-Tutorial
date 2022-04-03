@@ -4,18 +4,20 @@ import 'package:supabase_auth/screens/dashboard.dart';
 import 'package:supabase_auth/screens/sign_in_screen.dart';
 import 'package:supabase_auth/screens/sign_up_screen.dart';
 
-Future<void> main() async{
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Supabase.initialize(
       url: 'YOUR_SUPABASE_URL',
       anonKey: 'YOUR_SUPABASE_ANON_KEY',
       authCallbackUrlHostname: 'login-callback', // optional
       debug: true // optional
-  );
-  runApp(MyApp());
+      );
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
 // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {

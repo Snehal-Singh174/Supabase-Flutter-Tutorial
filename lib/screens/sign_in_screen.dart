@@ -1,9 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:supabase_auth/supabase_state/auth_state.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -23,7 +21,7 @@ class _SignInScreenState extends AuthState<SignInScreen> {
       child: Scaffold(
         backgroundColor: Colors.white,
         resizeToAvoidBottomInset: true,
-        body: Container(
+        body: SizedBox(
           height: 768,
           width: 375,
           child: Column(
@@ -255,14 +253,14 @@ class _SignInScreenState extends AuthState<SignInScreen> {
                                   ]),
                             ),
                             GestureDetector(
-                              onTap: (){
+                              onTap: () {
                                 onTapBtnGoogleSignin();
                               },
                               child: Container(
                                 width: 375,
                                 height: 57,
-                                margin:
-                                    const EdgeInsets.only(top: 16, left: 20, right: 20),
+                                margin: const EdgeInsets.only(
+                                    top: 16, left: 20, right: 20),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(
                                     5,
@@ -274,7 +272,8 @@ class _SignInScreenState extends AuthState<SignInScreen> {
                                 ),
                                 child: Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     children: [
                                       Padding(
                                         padding: const EdgeInsets.only(
@@ -309,7 +308,7 @@ class _SignInScreenState extends AuthState<SignInScreen> {
                               ),
                             ),
                             GestureDetector(
-                              onTap: (){
+                              onTap: () {
                                 onTapBtnFacebookSignin();
                               },
                               child: Container(
@@ -318,7 +317,7 @@ class _SignInScreenState extends AuthState<SignInScreen> {
                                 margin: const EdgeInsets.only(
                                   top: 8,
                                   left: 20,
-                                  right: 20
+                                  right: 20,
                                 ),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(
@@ -331,7 +330,8 @@ class _SignInScreenState extends AuthState<SignInScreen> {
                                 ),
                                 child: Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     children: [
                                       Padding(
                                         padding: const EdgeInsets.only(
@@ -367,7 +367,8 @@ class _SignInScreenState extends AuthState<SignInScreen> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                Navigator.pushReplacementNamed(context, '/signup');
+                                Navigator.pushReplacementNamed(
+                                    context, '/signup');
                               },
                               child: Container(
                                 width: 212,
@@ -421,20 +422,22 @@ class _SignInScreenState extends AuthState<SignInScreen> {
       email: emailController.text,
       password: passwordController.text,
     );
-    if(response.error!=null){
+    if (response.error != null) {
       final snackbar = SnackBar(content: Text(response.error!.message));
       ScaffoldMessenger.of(context).showSnackBar(snackbar);
-    }else{
+    } else {
       Navigator.pushReplacementNamed(context, '/dashboard');
     }
   }
 
   void onTapBtnGoogleSignin() async {
     await Supabase.instance.client.auth.signInWithProvider(
-        Provider.google,
+      Provider.google,
       options: AuthOptions(redirectTo: authRedirectUri),
     );
-  }void onTapBtnFacebookSignin() async {
+  }
+
+  void onTapBtnFacebookSignin() async {
     await Supabase.instance.client.auth.signInWithProvider(
       Provider.facebook,
       options: AuthOptions(redirectTo: authRedirectUri),

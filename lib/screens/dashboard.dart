@@ -54,16 +54,16 @@ class _DashboardScreenState extends AuthRequiredState<DashboardScreen> {
                 "User: ${user!.userMetadata['full_name'] ?? user!.email}",
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 20
+                  fontSize: 20,
                 ),
               ),
             ),
           ),
           ElevatedButton(
-              onPressed: () {
-                onTapSignOut();
-              },
-              child: const Text('SignOut'),
+            onPressed: () {
+              onTapSignOut();
+            },
+            child: const Text('SignOut'),
           )
         ],
       ),
