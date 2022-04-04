@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:supabase_auth/supabase_state/auth_state.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -20,7 +19,7 @@ class _SignUpScreenState extends AuthState<SignUpScreen> {
       child: Scaffold(
         backgroundColor: Colors.white,
         resizeToAvoidBottomInset: true,
-        body: Container(
+        body: SizedBox(
           height: 768,
           width: 375,
           child: Column(
@@ -170,7 +169,7 @@ class _SignUpScreenState extends AuthState<SignUpScreen> {
                               ),
                             ),
                             GestureDetector(
-                              onTap: (){
+                              onTap: () {
                                 onTapBtnSignUp();
                               },
                               child: Padding(
@@ -247,7 +246,6 @@ class _SignUpScreenState extends AuthState<SignUpScreen> {
                             )
                           ]),
                     ),
-
                   ),
                 )
               ]),
@@ -256,12 +254,13 @@ class _SignUpScreenState extends AuthState<SignUpScreen> {
     );
   }
 
-  void onTapBtnSignUp() async{
-    final response = await Supabase.instance.client.auth.signUp(emailController.text, passwordController.text);
-    if(response.error!=null){
+  void onTapBtnSignUp() async {
+    final response = await Supabase.instance.client.auth
+        .signUp(emailController.text, passwordController.text);
+    if (response.error != null) {
       final snackbar = SnackBar(content: Text(response.error!.message));
       ScaffoldMessenger.of(context).showSnackBar(snackbar);
-    }else{
+    } else {
       Navigator.pushReplacementNamed(context, '/dashboard');
     }
   }
